@@ -4,14 +4,41 @@
         <style>
             header {
                 text-align: Left;
-                margin: 20px;
+                margin: 10px;
             }
+
             body {
-                background: rgba(133, 36, 36, 0.815);
+                background: #852424d0;
                 font-family: 'Times New Roman', Times, serif;
                 margin: 0;
                 padding: 0;
             }
+
+            nav ul {
+            list-style: none;
+            display: flex;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            
+            }
+
+            nav li {
+            margin: 9px 20px 7px;
+            }
+
+            nav a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            font-size: 18px;
+            transition: color 0.3s;
+            }
+
+            nav a:hover {
+            color: rgb(250, 164, 5);
+            }
+
             section {
                 background: blue;
                 color: gray;
@@ -25,32 +52,27 @@
                 margin: auto;
                 width: 100px;
 
-            }
-            h1 {
-                color: red;
-                text-align: center;
-            }
+           }
 
         </style>
 
     </head>
 
-    <body>
+<body>
+            
+    <header> 
+        <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="experiences.html">Experiences</a></li>
+               <li><a href="education.html">Education</a></li>
+               <li><a href="hobies.html">Hobies</a></li>
+            </ul>        
+        </nav>
+        <h1>About Me</h1>
 
-         <header>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Experience</li>
-                    <li>Education</li>
-                    <li>Hobies</li>
-                </ul>
-            </nav>
+    </header>
 
-         </header>
-            <p> I am a Mechatronics Engineer. Enormous passion for Robotics, Electronics, and AI.
-            Currently doing my masters in AI engineering of Autonomous Systems.
-            </p>
         <section>
             <div>a</div>
             <div>b</div>
@@ -58,9 +80,7 @@
         </section>
         <section>lower section</section>
         <footer> footer</footer>
-        <h1>Experience </h1>
-        <h2>Education  </h2>
-        <h3>Hobbiessss </h3>
-    </body>
+
+</body>
     
 </html>
