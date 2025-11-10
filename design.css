@@ -1,7 +1,7 @@
 
             header h1 {
                 text-align: Left;
-                margin: 20px;
+                margin: 20px 60PX;
             }
 
             header nav {
@@ -10,42 +10,49 @@
             }
 
             body {
-                background: #852424d0;
+                background: #ffffff;
                 font-family: 'Times New Roman', Times, serif;
                 margin: 0;
                 padding: 0;
             }
 
             nav ul {
-            background-color: aqua;
-            list-style: none;
-            display: flex;
-            text-align: left;
-            margin: 0;
-            padding: 20px;
-            
+                background-image: url("images/photoheader2.png");
+                background-position: center -380px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                list-style: none;
+                display: flex;
+                text-align: left;
+                margin: 0;
+                padding: 45px;
+
             }
 
             nav li {
-            margin: 9px 20px 7px;
+                margin: 19px 20px 7px;
             }
 
             nav a {
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-weight: bolder;
-            font-size: 18px;
-            transition: color 0.3s;
+                text-decoration: none;
+                background: white;
+                color: rgb(0, 0, 0);
+                font-weight: bolder;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 21px;
+                transition: color 0.3s;
             }
 
             nav a:hover {
-            color: rgb(250, 164, 5);
+                color: rgb(44, 73, 235);
             }
 
             section {
-                background: blue;
-                color: gray;
-                padding: 20px;
+                background-image: url("images/photoheader2.png");
+                background-position: center -600px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 100px;
                 display: flex;
                 flex-direction: row;
             }
@@ -57,4 +64,12 @@
 
            }
 
-        
+            .profile-photo {
+                max-width: 500px;
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                margin: 20px 0 80px;
+                margin-left: auto;
+                display: block;
+            }
