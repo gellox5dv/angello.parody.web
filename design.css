@@ -17,7 +17,7 @@
                 margin: 20px 60px;
                 font-family: 'Times New Roman', Times, serif;
                 text-align: justify;
-                font-size: 20px;
+                font-size: 22px;
             }
 
             header nav {
@@ -111,21 +111,35 @@
                 flex-direction: row;
             }
 
+            .bottom-section {
+                margin: -40px 0 0;
+                padding: 40px 60px 120px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
             div {
                 background: transparent;
                 margin: auto;
-                width: 1000px;
-                }
+                width: 50px;
+            }
             
             .social-links {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-                padding: 20px;
+                margin: 0;
+                padding: 0;
+                width: auto;
+                flex-wrap: nowrap;
+                gap: 40px;
             }
 
             .social-links a {
-                display: inline-block;
+                display: flex;
+                align-items: center;
                 transition: transform 0.3s;
             }
 
@@ -134,11 +148,28 @@
             }
 
             .linkedin {
+                margin-top: -240px;
                 width: 50px;
                 height: 50px;
                 transition: all 0.3s;
+                opacity: 1.0;
+                filter: grayscale(100%);
             }
 
-            .linkedin:hover {
-                opacity: 0.8;
+            .email {
+                margin-top: -240px;
+                width: 50px;
+                height: 50px;
+                transition: all 0.3s;
+                opacity: 1.0;
+                filter: grayscale(100%);
+            }
+
+            .github {
+                margin-top: -240px;
+                width: 50px;
+                height: 50px;
+                transition: all 0.3s;
+                opacity: 1.0;
+                filter: grayscale(100%);
             }
