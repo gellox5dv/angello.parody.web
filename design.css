@@ -125,6 +125,69 @@
                 margin: auto;
                 width: 50px;
             }
+
+            .hobbies-section {
+                background-image: none;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 24px;
+                padding: 80px 60px;
+                min-height: 420px;
+            }
+
+            .hobby-image-wrap {
+                width: auto;
+                margin: 0;
+                flex: 0 0 auto;
+                position: relative;
+            }
+
+            .hobby-photo {
+                display: block;
+                width: 560px;
+                max-width: 100%;
+                height: auto;
+                border-radius: 14px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .hobby-arrow {
+                position: absolute;
+                right: 12px;
+                bottom: 12px;
+                width: 38px;
+                height: 38px;
+                border: none;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.85);
+                color: black;
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            .hobby-text {
+                width: auto;
+                max-width: 520px;
+                margin: 0;
+                transition: filter 0.3s ease;
+            }
+
+            .hobby-text.is-blurry {
+                filter: blur(8px);
+            }
+
+            .hobby-text h2 {
+                margin: 0 0 16px;
+            }
+
+            .hobby-text p {
+                margin: 0;
+                font-size: 22px;
+                line-height: 1.5;
+                text-align: justify;
+            }
             
             .social-links {
                 display: flex;
