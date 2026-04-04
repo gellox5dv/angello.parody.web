@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../design.css">
+    </head>
+
+<body>
+            
+    <header> 
+
+        <nav>
+
+            <ul>
+
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="experiences.html">EXPERIENCES</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="hobbies.html">HOBBIES</a></li>
+
+            </ul>        
+
+        </nav>
+
+    </header>
+
+        <section class="hobbies-section">
+            <div class="hobby-image-wrap">
+                <img src="../images/sports/QC7A8545.jpg" alt="Playing volleyball" class="hobby-photo" id="hobby-photo">
+                <button type="button" class="hobby-arrow" id="hobby-arrow" aria-label="Show next image">&#8594;</button>
+            </div>
+            <div class="hobby-text is-blurry" id="hobby-text">
+                <h2>Sports</h2>
+                <p>I am a highly disciplined individual with a strong background in sports and teamwork. Throughout my life, I have practiced more than ten different disciplines, with my most significant experiences in football, volleyball, boxing, taekwondo, and baseball.
+
+                During my time living in Mongolia, I had the opportunity to represent my high school in an international tournament in China, where we achieved second place. In my senior year, I was honored to serve as team captain, further strengthening my leadership and responsibility skills.
+
+                In boxing, I have participated in numerous amateur fights and was part of my state league, gaining valuable experience in competition and resilience. I also hold a yellow belt in taekwondo, reflecting my commitment to discipline and continuous improvement.
+
+                Additionally, I was selected to compete in the prestigious Copa Pony Malta as a member of my baseball team, an experience that reinforced my dedication, teamwork, and competitive spirit.</p>
+            </div>
+        </section>
+
+        <section class="charity-section">
+            <div class="hobby-image-wrap">
+                <img src="../images/charity/fiscal" alt="Charity activity" class="hobby-photo" id="charity-photo">
+                <button type="button" class="hobby-arrow" id="charity-arrow" aria-label="Show next charity image">&#8594;</button>
+            </div>
+            <div class="hobby-text is-blurry" id="charity-text">
+                <h2>Charity</h2>
+                <p>Giving back to the community has been an important part of my life since childhood. From a young age, I was actively involved in the Lions Club, where I participated in various initiatives such as tree planting, beach clean-ups, and donating essential materials to children and communities in need.
+
+                Throughout my journey, I progressed through different stages of the organization, serving as a Cub and later as a Leo. Each corresponding to different age groups and levels of responsibility. During this time, I was also elected as the fiscal of my group, a role I held for one year before moving abroad, where I was responsible for managing and overseeing financial activities.
+
+                These experiences shaped my sense of responsibility, empathy, and leadership. Looking ahead, once I achieve financial stability, I aspire to continue this path of service by becoming a Lion and further contributing to meaningful social impact.</p>
+            </div>
+        </section>
+
+        <section class="music-section">
+            <div class="hobby-image-wrap">
+                <img src="../images/Music/guitarra" alt="Playing guitar" class="hobby-photo" id="music-photo">
+                <button type="button" class="hobby-arrow" id="music-arrow" aria-label="Show next music image">&#8594;</button>
+            </div>
+            <div class="hobby-text is-blurry" id="music-text">
+                <h2>Music</h2>
+                <p>Music has always been an essential part of my life, as I come from a family of musicians who inspired my passion from an early age. Since childhood, I have played the guitar and later taught myself the basics of piano, developing my skills through curiosity and dedication.
+
+                During my four years living in Germany, I also discovered a deep passion for DJing, which has become an important creative outlet for me. It allows me to explore sound, rhythm, and audience connection in a dynamic and expressive way.
+
+                Combining my interest in music with my engineering mindset, I designed and 3D printed my own ocarina, which I use to play some of my favorite childhood songs. Music, for me, is both a creative pursuit and a way to stay connected to my roots.</p>
+            </div>
+        </section>
+        <section class="bottom-section">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/angello-parody-38032830a/">
+                    <img src="../images/linkedin3.png" alt="Visit my LinkedIn profile" class="linkedin">
+                </a>
+                <a href="https://outlook.live.com/mail/0/?deeplink=mail%2F0%2F%3Fnlp%3D0">
+                    <img src="../images/email3.png" alt="Visit my email" class="email">
+                </a>
+                <a href="https://github.com/gellox5dv">
+                    <img src="../images/github.png" alt="Visit my github" class="github">
+                </a>
+            </div>
+        </section>
+
+        <script>
+            const hobbyPhoto = document.getElementById("hobby-photo");
+            const hobbyText = document.getElementById("hobby-text");
+            const hobbyArrow = document.getElementById("hobby-arrow");
+            const hobbyImages = [
+                "../images/sports/QC7A8545.jpg",
+                "../images/sports/QC7A6976.jpg",
+                "../images/sports/DSC_0193.JPG",
+                "../images/sports/baseball",
+                "../images/sports/taekwondo"
+            ];
+            let hobbyImageIndex = 0;
+            const charityPhoto = document.getElementById("charity-photo");
+            const charityText = document.getElementById("charity-text");
+            const charityArrow = document.getElementById("charity-arrow");
+            const charityImages = [
+                "../images/charity/fiscal",
+                "../images/charity/leo"
+            ];
+            let charityImageIndex = 0;
+            const musicPhoto = document.getElementById("music-photo");
+            const musicText = document.getElementById("music-text");
+            const musicArrow = document.getElementById("music-arrow");
+            const musicImages = [
+                "../images/Music/guitarra",
+                "../images/Music/guitarra 2",
+                "../images/Music/guitarra2",
+                "../images/Music/piano",
+                "../images/Music/dj.jpeg"
+            ];
+            let musicImageIndex = 0;
+
+            function focusSection(activeText) {
+                hobbyText.classList.add("is-blurry");
+                charityText.classList.add("is-blurry");
+                musicText.classList.add("is-blurry");
+                activeText.classList.remove("is-blurry");
+            }
+
+            hobbyPhoto.addEventListener("click", function () {
+                focusSection(hobbyText);
+            });
+
+            hobbyArrow.addEventListener("click", function () {
+                hobbyImageIndex = (hobbyImageIndex + 1) % hobbyImages.length;
+                hobbyPhoto.src = hobbyImages[hobbyImageIndex];
+            });
+
+            charityPhoto.addEventListener("click", function () {
+                focusSection(charityText);
+            });
+
+            charityArrow.addEventListener("click", function () {
+                charityImageIndex = (charityImageIndex + 1) % charityImages.length;
+                charityPhoto.src = charityImages[charityImageIndex];
+            });
+
+            musicPhoto.addEventListener("click", function () {
+                focusSection(musicText);
+            });
+
+            musicArrow.addEventListener("click", function () {
+                musicImageIndex = (musicImageIndex + 1) % musicImages.length;
+                musicPhoto.src = musicImages[musicImageIndex];
+            });
+        </script>
+
+</body>
+    
+</html>
