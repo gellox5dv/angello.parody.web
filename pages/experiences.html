@@ -19,20 +19,52 @@
     </header>
 
         <section class="experiences-gallery">
-            <div class="experience-card">
-                <img
-                    src="../images/experiences/soldering.png"
-                    alt="Soldering photo"
-                    class="experience-photo">
-                <p class="experience-caption">Soldering</p>
+            <button type="button" class="experience-arrow experience-arrow-left" id="experience-arrow-left" aria-label="Show previous experience">&#8592;</button>
+            <div class="experiences-viewport" id="experiences-viewport">
+                <a class="experience-card experience-card-link" href="experiences-inside/soldering-inside.html">
+                    <img
+                        src="../images/experiences/soldering2.png"
+                        alt="Soldering photo"
+                        class="experience-photo">
+                    <p class="experience-caption">Soldering</p>
+                </a>
+                <a class="experience-card experience-card-link" href="experiences-inside/robotics-inside.html">
+                    <img
+                        src="../images/experiences/robotics.png"
+                        alt="Robotics photo"
+                        class="experience-photo">
+                    <p class="experience-caption">Robotics</p>
+                </a>
+                <a class="experience-card experience-card-link" href="experiences-inside/electronics-inside.html">
+                    <img
+                        src="../images/experiences/electronics.png"
+                        alt="Electronics photo"
+                        class="experience-photo">
+                    <p class="experience-caption">Electronics</p>
+                </a>
+                <a class="experience-card experience-card-link" href="experiences-inside/printing-inside.html">
+                    <img
+                        src="../images/experiences/printer.png"
+                        alt="3D printing photo"
+                        class="experience-photo">
+                    <p class="experience-caption">3D Printing</p>
+                </a>
+                <a class="experience-card experience-card-link" href="experiences-inside/software-inside.html">
+                    <img
+                        src="../images/experiences/software.png"
+                        alt="Software photo"
+                        class="experience-photo">
+                    <p class="experience-caption">Software</p>
+                </a>
+                <a class="experience-card experience-card-link" href="experiences-inside/customer-inside.html">
+                    <img
+                        src="../images/experiences/talking.png"
+                        alt="Talking photo"
+                        class="experience-photo">
+                    <p class="experience-caption">Customer Relationship</p>
+                </a>
             </div>
-            <div class="experience-card">
-                <img
-                    src="../images/experiences/robotics.png"
-                    alt="Robotics photo"
-                    class="experience-photo">
-                <p class="experience-caption">Robotics</p>
-            </div>
+            <button type="button" class="experience-arrow experience-arrow-right" id="experience-arrow-right" aria-label="Show next experience">&#8594;</button>
         </section>
 
         <section class="bottom-section">
@@ -48,6 +80,40 @@
                 </a>
             </div>
         </section>
+
+        <script>
+            const experiencesViewport = document.getElementById("experiences-viewport");
+            const experienceArrowLeft = document.getElementById("experience-arrow-left");
+            const experienceArrowRight = document.getElementById("experience-arrow-right");
+            const experienceCards = experiencesViewport.querySelectorAll(".experience-card");
+            let experienceIndex = 0;
+
+            function getExperienceStep () {
+                const experienceCard = experienceCards[0];
+                return experienceCard.offsetWidth + 32;
+            }
+
+            function showExperience(index) {
+                experienceIndex = (index + experienceCards.length) % experienceCards.length;
+                experiencesViewport.scrollTo({
+                    left: getExperienceStep() * experienceIndex,
+                    behavior: "smooth"
+                });
+            }
+
+            experienceArrowLeft.addEventListener("click", function () {
+                showExperience(experienceIndex - 1);
+            });
+
+            experienceArrowRight.addEventListener("click", function () {
+                showExperience(experienceIndex + 1);
+            });
+
+            window.addEventListener("resize", function () {
+                showExperience(experienceIndex);
+            });
+
+        </script>
 
 </body>
     
