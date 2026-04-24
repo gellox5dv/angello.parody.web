@@ -267,6 +267,12 @@
                 flex: 0 0 auto;
             }
 
+            .SLAM-video {
+                width: auto;
+                margin: 0;
+                flex: 0 0 auto;
+            }
+
             .nash-equilibrium {
                 width: auto;
                 margin: 0;
