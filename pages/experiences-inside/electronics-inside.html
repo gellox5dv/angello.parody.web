@@ -21,3 +21,72 @@
             <div class="experience-detail-copy">
                 <a href="../experiences.html" class="experience-back-link">← Back to experiences</a>
                 <p class="experience-detail-label">Featured experience</p>
+                <h1>Low Pass Filter</h1>
+                <p>
+                    This project involved the design and implementation of an analog low-pass filter on a custom circuit board. 
+                    The purpose of the filter was to attenuate high-frequency components of an input signal while allowing low-frequency signals to pass through. 
+                    Using an RC configuration, the circuit demonstrated signal smoothing and noise reduction, which was visualized through oscilloscope measurements comparing input and output waveforms.
+                </p>
+            </div>
+
+            <div class="experience-detail-image-wrap experience-detail-gallery">
+                <img src="../../images/experiences/electronics/oscilo-low.jpeg"
+                     alt="Oscilloscope measurement of a low-pass filter"
+                     class="experience-detail-image electronics-gallery-image is-active">
+                <img src="../../images/experiences/electronics/low-board.jpeg"
+                     alt="Custom circuit board for low-pass filter"
+                     class="experience-detail-image electronics-gallery-image">
+                <button type="button" class="detail-image-arrow" id="electronics-image-arrow" aria-label="Show next electronics image">&#8594;</button>
+            </div>
+        </section>
+
+        <script>
+            const electronicsImages = document.querySelectorAll(".electronics-gallery-image");
+            const electronicsImageArrow = document.getElementById("electronics-image-arrow");
+            let electronicsImageIndex = 0;
+
+            function showElectronicsImage(index) {
+                electronicsImages[electronicsImageIndex].classList.remove("is-active");
+                electronicsImageIndex = (index + electronicsImages.length) % electronicsImages.length;
+                electronicsImages[electronicsImageIndex].classList.add("is-active");
+            }
+
+            electronicsImageArrow.addEventListener("click", function () {
+                showElectronicsImage(electronicsImageIndex + 1);
+            });
+        </script>
+
+        <section class="experience-detail-section">
+            <div class="experience-detail-text-block">
+                <h2>What I worked on</h2>
+                <p>
+                    Designed and calculated component values (resistor and capacitor) for desired cutoff frequency.
+                    Built and soldered the circuit on a physical board.
+                    Measured input and output signals using an oscilloscope.
+                    Analyzed frequency response and signal attenuation.
+                    Verified theoretical results with practical observations.
+                </p>
+            </div>
+
+            <div class="experience-detail-text-block">
+                <h2>Key skills</h2>
+                <p>
+                    Analog electronics and circuit design.
+                    Signal processing fundamentals.
+                    Oscilloscope usage and waveform analysis.
+                    Soldering and PCB prototyping.
+                    Mathematical modeling of RC circuits.
+                </p>
+            </div>
+
+            <div class="experience-detail-text-block">
+                <h2>Impact</h2>
+                <p>
+                    This project strengthened my understanding of signal filtering and frequency domain behavior in real systems. 
+                    It demonstrated how theoretical electrical engineering concepts translate into practical applications such as noise reduction, sensor signal conditioning, and communication systems.
+                </p>
+            </div>
+
+        </section>
+    </body>
+</html>
